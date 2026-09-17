@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  SITIO DE DEMOSTRACIÓN. CARRIL DEZ es una autoescuela FICTICIA.
+  Nombre, dirección, teléfono, horarios, precios, TASAS, equipo, vehículos y
+  preguntas del test son datos de muestra inventados para enseñar la plantilla.
+  No corresponden a ningún negocio real ni a ningún importe oficial vigente.
+  Plantilla reskineable: ver README.md.
+  ============================================================================
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CARRIL DEZ · Autoescuela en Arteixo (demo)</title>
+<meta name="description" content="Plantilla de demostración de una autoescuela ficticia: la ruta hasta el carné, permisos, test de muestra y precios inventados.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B0D10">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CARRIL DEZ · Autoescuela (sitio de demostración)">
+<meta property="og:description" content="Negocio ficticio. Plantilla de muestra con la ruta hasta el carné, permisos y precios inventados.">
+<meta property="og:image" content="assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DrivingSchool",
+  "name": "CARRIL DEZ",
+  "description": "Autoescuela ficticia usada como plantilla de demostración.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rúa da Pista 22, baixo",
+    "addressLocality": "Arteixo",
+    "addressRegion": "A Coruña",
+    "postalCode": "15142",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34981000000",
+  "email": "info@carrildez.example",
+  "priceRange": "€€",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "13:00" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="salto" href="#contenido">Saltar al contenido</a>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-marca"></span><span class="cursor-texto" id="cursor-texto"></span></div>
+
+<header class="cabecera" id="cabecera">
+  <a class="marca" href="#inicio" aria-label="CARRIL DEZ, inicio">
+    <img src="assets/logo.svg" width="56" height="56" alt="" class="marca-mark">
+    <span class="marca-texto">CARRIL<b>DEZ</b><em>autoescuela · Arteixo</em></span>
+  </a>
+
+  <nav class="nav" id="nav" aria-label="Principal">
+    <ul class="nav-lista">
+      <li><a href="#ruta">La ruta</a></li>
+      <li><a href="#permisos">Permisos</a></li>
+      <li><a href="#precios">Precios</a></li>
+      <li><a href="#test">Test</a></li>
+      <li><a href="#aula">Aula y flota</a></li>
+      <li><a href="#matricula">Matrícula</a></li>
+    </ul>
+    <a class="boton boton--cian nav-cta" href="#matricula" data-iman>Reservar plaza</a>
+  </nav>
+
+  <button class="hamburguesa" id="hamburguesa" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="contenido">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="inicio">
+    <div class="hero-asfalto" aria-hidden="true">
+      <div class="linea-carril" id="linea-carril"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+
+    <div class="hero-cuerpo">
+      <p class="sobretitulo" data-aparecer>Autoescuela en Arteixo · A Coruña · desde 2011</p>
+      <h1 class="titular titular--hero" data-revelar>Un carril, diez pasos y tu carné al final</h1>
+      <p class="parrafo parrafo--grande" data-aparecer>Enseñamos a conducir, no a aprobar de milagro. Teórica con
+        profesor en el aula, test corregidos uno a uno y prácticas con el mismo coche y el mismo profesor
+        de principio a fin.</p>
+      <div class="hero-acciones" data-aparecer>
+        <a class="boton boton--cian" href="#matricula" data-iman>Reservar plaza</a>
+        <a class="boton boton--linea" href="#ruta" data-iman>Ver la ruta completa</a>
+      </div>
+      <dl class="hero-datos" data-aparecer>
+        <div><dt>Turnos de teórica</dt><dd>mañana, tarde y noche</dd></div>
+        <div><dt>Prácticas</dt><dd>55 minutos, de lunes a sábado</dd></div>
+        <div><dt>Aula</dt><dd>24 plazas · Rúa da Pista 22</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= FRANJA ================= -->
+  <section class="franja" aria-label="Permisos y cursos">
+    <div class="franja-pista" id="franja-pista">
+      <div class="franja-grupo">
+        <span>Permiso B</span><i aria-hidden="true"></i><span>A2</span><i aria-hidden="true"></i><span>A</span><i aria-hidden="true"></i><span>AM</span><i aria-hidden="true"></i><span>B+E</span><i aria-hidden="true"></i><span>Recuperación de puntos</span><i aria-hidden="true"></i>
+      </div>
+      <div class="franja-grupo" aria-hidden="true">
+        <span>Permiso B</span><i></i><span>A2</span><i></i><span>A</span><i></i><span>AM</span><i></i><span>B+E</span><i></i><span>Recuperación de puntos</span><i></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LA RUTA (protagonista) ================= -->
+  <section class="ruta" id="ruta">
+    <div class="ruta-cab">
+      <p class="rotulo"><span>01</span> La ruta</p>
+      <h2 class="titular" data-revelar>De la matrícula al primer viaje solo</h2>
+      <p class="parrafo">Seis tramos. Ninguno se salta y ninguno se alarga porque sí: cuando un alumno está
+        listo para el siguiente, se lo decimos nosotros y lo decide él.</p>
+    </div>
+
+    <div class="ruta-escena">
+      <div class="ruta-carretera" aria-hidden="true">
+        <svg class="trazado" id="trazado" viewBox="0 0 200 1600" preserveAspectRatio="xMidYMin meet">
+          <path id="borde" d="M100 20 C 40 220, 160 380, 100 560 C 40 740, 160 900, 100 1080 C 40 1250, 150 1400, 100 1580"
+                fill="none" stroke="#2C323C" stroke-width="58" stroke-linecap="round" opacity=".6"/>
+          <path id="asfalto" d="M100 20 C 40 220, 160 380, 100 560 C 40 740, 160 900, 100 1080 C 40 1250, 150 1400, 100 1580"
+                fill="none" stroke="#1B1F26" stroke-width="54" stroke-linecap="round"/>
+          <path id="linea" d="M100 20 C 40 220, 160 380, 100 560 C 40 740, 160 900, 100 1080 C 40 1250, 150 1400, 100 1580"
+                fill="none" stroke="#E7ECF2" stroke-width="4" stroke-dasharray="22 26" stroke-linecap="butt"/>
+          <path id="recorrido" d="M100 20 C 40 220, 160 380, 100 560 C 40 740, 160 900, 100 1080 C 40 1250, 150 1400, 100 1580"
+                fill="none" stroke="#23E5FF" stroke-width="7" stroke-linecap="round" opacity=".9"/>
+          <g id="coche" transform="translate(100,20)">
+            <circle cx="0" cy="0" r="17" fill="#23E5FF" opacity=".18"/>
+            <path d="M-9 8 L-9 -6 L-4 -12 L4 -12 L9 -6 L9 8 Z" fill="#23E5FF"/>
+            <path d="M-6 -6 L6 -6" stroke="#0B0D10" stroke-width="2"/>
+          </g>
+        </svg>
+      </div>
+
+      <ol class="hitos" id="hitos">
+        <li class="hito" data-hito="1">
+          <p class="hito-num">Tramo 01</p>
+          <h3>Matrícula y papeles</h3>
+          <p>Traes el DNI y una foto; nosotros hacemos el expediente, pedimos cita para el psicotécnico y
+            te damos el acceso a los test el mismo día.</p>
+          <p class="hito-dato">Dura una tarde</p>
+        </li>
+        <li class="hito" data-hito="2">
+          <p class="hito-num">Tramo 02</p>
+          <h3>Teórica en el aula</h3>
+          <p>Doce sesiones de una hora con profesor delante, no un vídeo. Tres turnos al día para que
+            encajen con el trabajo o con las clases.</p>
+          <p class="hito-dato">De dos a cuatro semanas</p>
+        </li>
+        <li class="hito" data-hito="3">
+          <p class="hito-num">Tramo 03</p>
+          <h3>Test hasta que salgan</h3>
+          <p>Test en casa desde el móvil y un repaso semanal en el aula donde se corrigen los fallos uno a
+            uno. No mandamos a nadie al examen con más de dos fallos de media.</p>
+          <p class="hito-dato">Repaso los miércoles</p>
+        </li>
+        <li class="hito" data-hito="4">
+          <p class="hito-num">Tramo 04</p>
+          <h3>Examen teórico</h3>
+          <p>Te llevamos, te esperamos y te traemos. Si no sale a la primera, el siguiente intento se
+            prepara con un plan de fallos, no repitiendo todo desde cero.</p>
+          <p class="hito-dato">Fecha en 2 o 3 semanas</p>
+        </li>
+        <li class="hito" data-hito="5">
+          <p class="hito-num">Tramo 05</p>
+          <h3>Prácticas</h3>
+          <p>Clases de 55 minutos, siempre con el mismo profesor y el mismo coche. Empezamos en polígono
+            los primeros días y acabamos en autovía y aparcamientos de verdad.</p>
+          <p class="hito-dato">Unas 20 clases de media</p>
+        </li>
+        <li class="hito" data-hito="6">
+          <p class="hito-num">Tramo 06</p>
+          <h3>Examen práctico y carné</h3>
+          <p>La víspera se hace una clase de recorrido por la zona de examen. Después, el permiso provisional
+            y una charla corta sobre los tres primeros meses conduciendo solo.</p>
+          <p class="hito-dato">Y ya está</p>
+        </li>
+      </ol>
+    </div>
+
+    <p class="ruta-aviso" id="ruta-aviso" role="status">Tramo 01 · Matrícula y papeles</p>
+  </section>
+
+  <!-- ================= PERMISOS ================= -->
+  <section class="permisos" id="permisos">
+    <div class="permisos-cab">
+      <p class="rotulo"><span>02</span> Permisos</p>
+      <h2 class="titular" data-revelar>Lo que se puede sacar aquí</h2>
+      <p class="parrafo">Todo lo que ves está en la misma aula y con los mismos profesores. Los cursos de
+        mercancías y viajeros los damos en colaboración con un centro de formación de A Coruña.</p>
+    </div>
+
+    <ul class="rejilla-permisos">
+      <li class="permiso">
+        <p class="permiso-letra">B</p>
+        <h3>Coche</h3>
+        <p>El de siempre: turismos de hasta 3.500 kg. Teórica común, prácticas con cambio manual o
+          automático.</p>
+        <p class="permiso-edad">Desde los 18 años</p>
+      </li>
+      <li class="permiso">
+        <p class="permiso-letra">A2</p>
+        <h3>Moto media</h3>
+        <p>Hasta 35 kW. Maniobras en circuito cerrado y circulación en vía abierta con emisora.</p>
+        <p class="permiso-edad">Desde los 18 años</p>
+      </li>
+      <li class="permiso">
+        <p class="permiso-letra">A</p>
+        <h3>Moto sin límite</h3>
+        <p>Por examen o por antigüedad del A2 con el curso de formación. Te decimos cuál te toca sin
+          venderte el más caro.</p>
+        <p class="permiso-edad">Desde los 20 años</p>
+      </li>
+      <li class="permiso">
+        <p class="permiso-letra">AM</p>
+        <h3>Ciclomotor</h3>
+        <p>Para 45 km/h. Teórica específica, corta, y prácticas en circuito con casco y protecciones
+          nuestras.</p>
+        <p class="permiso-edad">Desde los 15 años</p>
+      </li>
+      <li class="permiso">
+        <p class="permiso-letra">B+E</p>
+        <h3>Remolque</h3>
+        <p>Para arrastrar remolque grande con el coche. Solo práctico, con maniobra de marcha atrás en
+          «S».</p>
+        <p class="permiso-edad">Con el B en vigor</p>
+      </li>
+      <li class="permiso permiso--curso">
+        <p class="permiso-letra">+6</p>
+        <h3>Recuperación de puntos</h3>
+        <p>Curso de recuperación parcial de puntos, en fin de semana. Plazas limitadas a doce personas
+          por convocatoria.</p>
+        <p class="permiso-edad">Dos convocatorias al mes</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ================= PRECIOS ================= -->
+  <section class="precios" id="precios">
+    <div class="precios-cab">
+      <p class="rotulo"><span>03</span> Precios</p>
+      <h2 class="titular" data-revelar>Importes de muestra, inventados</h2>
+      <div class="aviso-precios">
+        <p><strong>Atención:</strong> esta página es una demostración. Todos los importes de esta sección,
+          <strong>incluidas las tasas</strong>, son ficticios y no se corresponden con ninguna tarifa real
+          ni con ninguna tasa oficial vigente. En una autoescuela real, la tasa de examen la fija la
+          administración, se paga aparte y hay que publicar la cifra correcta del año en curso.</p>
+      </div>
+    </div>
+
+    <div class="precios-rejilla">
+      <table class="tabla">
+        <caption class="visual-oculto">Precios de muestra del permiso B en la autoescuela ficticia CARRIL DEZ</caption>
+        <thead>
+          <tr><th scope="col">Concepto</th><th scope="col">Qué incluye</th><th scope="col">Importe de muestra</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Matrícula permiso B</th><td>Expediente, material y acceso a los test</td><td><b>180 €</b></td></tr>
+          <tr><th scope="row">Teórica en aula</th><td>Doce sesiones y repasos hasta el examen</td><td><b>incluida</b></td></tr>
+          <tr><th scope="row">Clase práctica</th><td>55 minutos, coche y profesor</td><td><b>32 €</b></td></tr>
+          <tr><th scope="row">Bono de 10 clases</th><td>Diez clases de 55 minutos</td><td><b>295 €</b></td></tr>
+          <tr><th scope="row">Clase de examen</th><td>Recorrido por la zona de examen la víspera</td><td><b>45 €</b></td></tr>
+          <tr><th scope="row">Presentación a examen</th><td>Gestión, traslado y acompañamiento</td><td><b>60 €</b></td></tr>
+          <tr class="tabla-tasa"><th scope="row">Tasa de examen <span>ficticia</span></th><td>Importe inventado para la demostración</td><td><b>90 €</b></td></tr>
+          <tr class="tabla-tasa"><th scope="row">Psicotécnico <span>ficticio</span></th><td>Importe inventado para la demostración</td><td><b>45 €</b></td></tr>
+        </tbody>
+      </table>
+
+      <aside class="precios-nota">
+        <h3>Cómo se paga</h3>
+        <p>La matrícula al empezar y las clases a medida que se dan, sueltas o en bonos. Nada de paquetes
+          cerrados con un número de clases que no sabemos si vas a necesitar.</p>
+        <h3>Qué no cobramos</h3>
+        <p>Ni gestión de expediente aparte, ni «clase de presentación» encubierta, ni recargo por pagar con
+          tarjeta.</p>
+        <h3>Si no sale a la primera</h3>
+        <p>La segunda convocatoria solo lleva la tasa y la presentación. La clase de examen es opcional.</p>
+        <p class="precios-sello">Cifras inventadas · sitio de demostración</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================= TEST ================= -->
+  <section class="test" id="test">
+    <div class="test-cab">
+      <p class="rotulo"><span>04</span> Test</p>
+      <h2 class="titular" data-revelar>Tres preguntas de muestra</h2>
+      <p class="parrafo">Preguntas escritas para esta demostración: no son preguntas oficiales ni están
+        tomadas de ningún examen. Sirven para enseñar cómo funcionaría el test dentro de la web.</p>
+    </div>
+
+    <form class="test-caja" id="test-caja">
+      <ol class="test-lista">
+        <li class="pregunta" data-correcta="b">
+          <p class="pregunta-texto"><span>1.</span> En una vía de dos carriles por sentido dentro de población, ¿por qué carril se circula con carácter general?</p>
+          <div class="opciones">
+            <label><input type="radio" name="p1" value="a"> Por el de la izquierda, para ir más rápido</label>
+            <label><input type="radio" name="p1" value="b"> Por el de la derecha, salvo para adelantar o girar</label>
+            <label><input type="radio" name="p1" value="c"> Por el que menos tráfico tenga en ese momento</label>
+          </div>
+          <p class="respuesta" data-explica="Dentro de población se circula normalmente por el carril derecho; el izquierdo queda para adelantar, girar o cambiar de dirección."></p>
+        </li>
+        <li class="pregunta" data-correcta="c">
+          <p class="pregunta-texto"><span>2.</span> El intermitente al incorporarse a una rotonda sirve para…</p>
+          <div class="opciones">
+            <label><input type="radio" name="p2" value="a"> Nada: en la rotonda no hace falta señalizar</label>
+            <label><input type="radio" name="p2" value="b"> Avisar solo a quien viene por detrás</label>
+            <label><input type="radio" name="p2" value="c"> Anunciar la maniobra a todos los que pueden verse afectados</label>
+          </div>
+          <p class="respuesta" data-explica="Señalizar es avisar de una maniobra a cualquiera que pueda verse afectado: los de detrás, los de la rotonda y los peatones de la salida."></p>
+        </li>
+        <li class="pregunta" data-correcta="a">
+          <p class="pregunta-texto"><span>3.</span> Con el coche parado en un semáforo en rojo y lluvia intensa, la distancia de seguridad con el vehículo de delante…</p>
+          <div class="opciones">
+            <label><input type="radio" name="p3" value="a"> Importa igualmente: hay que dejar sitio para maniobrar</label>
+            <label><input type="radio" name="p3" value="b"> No importa, porque el coche está parado</label>
+            <label><input type="radio" name="p3" value="c"> Solo importa si hay una moto detrás</label>
+          </div>
+          <p class="respuesta" data-explica="Parado también conviene dejar espacio: permite salir si el de delante no arranca y evita quedarse encajonado."></p>
+        </li>
+      </ol>
+      <div class="test-pie">
+        <button class="boton boton--cian" type="submit" data-iman>Corregir</button>
+        <button class="boton boton--linea" type="reset" id="test-reset">Empezar de nuevo</button>
+        <p class="test-marcador" id="test-marcador" role="status">Sin corregir</p>
+      </div>
+    </form>
+  </section>
+
+  <!-- ================= AULA Y FLOTA ================= -->
+  <section class="aula" id="aula">
+    <div class="aula-cab">
+      <p class="rotulo"><span>05</span> Aula y flota</p>
+      <h2 class="titular" data-revelar>Dónde se estudia y con qué se practica</h2>
+      <p class="parrafo">Un aula de veinticuatro plazas en la planta baja, con pizarra, proyector y los
+        mismos test que luego usas en el móvil. Y cuatro vehículos, todos con doble mando y revisados en
+        el taller cada seis meses.</p>
+      <dl class="cifras" id="cifras">
+        <div><dt>plazas en el aula</dt><dd><span class="contador" data-hasta="24">24</span></dd></div>
+        <div><dt>sesiones de teórica</dt><dd><span class="contador" data-hasta="12">12</span></dd></div>
+        <div><dt>minutos por práctica</dt><dd><span class="contador" data-hasta="55">55</span></dd></div>
+        <div><dt>años dando clase</dt><dd><span class="contador" data-hasta="15">15</span></dd></div>
+      </dl>
+    </div>
+
+    <ul class="flota">
+      <li class="vehiculo">
+        <img src="assets/vehiculo-coche.svg" width="400" height="260" loading="lazy"
+             alt="Ilustración de frente del coche de prácticas, con doble mando y rótulo de la autoescuela.">
+        <div class="vehiculo-pie">
+          <h3>Dos coches de prácticas</h3>
+          <p>Uno manual y otro automático, los dos con doble mando, cámara de marcha atrás desactivada
+            durante las clases y el mismo tipo de asiento que en el examen.</p>
+        </div>
+      </li>
+      <li class="vehiculo">
+        <img src="assets/vehiculo-moto.svg" width="400" height="260" loading="lazy"
+             alt="Ilustración de frente de la moto de prácticas de 35 kilovatios.">
+        <div class="vehiculo-pie">
+          <h3>Una moto de A2</h3>
+          <p>De 35 kW, con emisora para las clases en vía abierta. Casco, guantes y protecciones de la
+            autoescuela incluidos mientras dure la formación.</p>
+        </div>
+      </li>
+      <li class="vehiculo">
+        <img src="assets/vehiculo-aula.svg" width="400" height="260" loading="lazy"
+             alt="Ilustración del aula: pizarra, proyector y filas de pupitres.">
+        <div class="vehiculo-pie">
+          <h3>El aula</h3>
+          <p>Veinticuatro plazas, tres turnos al día y un profesor delante en cada sesión. Los repasos de
+            test son los miércoles a las 19:00.</p>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="equipo">
+      <li>
+        <p class="equipo-inicial" aria-hidden="true">M</p>
+        <h3>Marta Ledo</h3>
+        <p class="equipo-rol">Directora y profesora de teórica</p>
+        <p>Da las doce sesiones del aula y lleva el repaso de los miércoles. Es quien decide si alguien
+          está listo para el examen teórico.</p>
+      </li>
+      <li>
+        <p class="equipo-inicial" aria-hidden="true">B</p>
+        <h3>Brais Sanmartín</h3>
+        <p class="equipo-rol">Profesor de prácticas · coche</p>
+        <p>Quince años dando clase en la zona. Empieza en el polígono y acaba metiendo a todo el mundo en
+          la autovía antes de la décima clase.</p>
+      </li>
+      <li>
+        <p class="equipo-inicial" aria-hidden="true">N</p>
+        <h3>Noa Ínsua</h3>
+        <p class="equipo-rol">Profesora de prácticas · moto y coche</p>
+        <p>Lleva el A2, el A y el AM, y las clases de recorrido de la víspera del examen. Su circuito de
+          conos tiene fama de ser peor que el del examen.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ================= PREGUNTAS ================= -->
+  <section class="preguntas" id="preguntas">
+    <div class="preguntas-cab">
+      <p class="rotulo"><span>06</span> Preguntas</p>
+      <h2 class="titular" data-revelar>Lo que se pregunta en el mostrador</h2>
+    </div>
+    <div class="acordeon">
+      <details><summary>¿Cuánto se tarda en sacarse el carné?</summary>
+        <p>Depende de cada persona y de las fechas de examen, así que no damos plazos cerrados. Lo honesto
+          es esto: la teórica suele llevar de dos a cuatro semanas y la media de prácticas de nuestros
+          alumnos ronda las veinte clases. Quien te prometa una fecha exacta se la está inventando.</p></details>
+      <details><summary>¿Los precios de esta web son los de verdad?</summary>
+        <p>No: esta página es una demostración y todos los importes están inventados, incluidas las tasas.
+          En una autoescuela real hay que publicar los precios vigentes y la tasa oficial del año en curso,
+          indicando que se paga aparte.</p></details>
+      <details><summary>¿Puedo dar clases con cambio automático?</summary>
+        <p>Sí. Ten en cuenta que, si te examinas con automático, el permiso queda limitado a ese tipo de
+          cambio hasta que hagas la prueba correspondiente. Te lo explicamos antes de decidir, no después.</p></details>
+      <details><summary>¿Hay clases por la noche?</summary>
+        <p>La teórica tiene turno de noche de lunes a jueves a las 20:00. Las prácticas llegan hasta las
+          21:00 de lunes a viernes y hasta las 13:00 los sábados.</p></details>
+      <details><summary>¿Y si suspendo?</summary>
+        <p>Se prepara la siguiente convocatoria con un plan hecho sobre los fallos concretos. En el práctico
+          solemos empezar por las dos o tres maniobras que se torcieron, no por repetirlo todo.</p></details>
+      <details><summary>¿Tenéis test en el móvil?</summary>
+        <p>Sí, con el acceso que se da el día de la matrícula. Los fallos quedan marcados para repasarlos en
+          el aula los miércoles.</p></details>
+    </div>
+  </section>
+
+  <!-- ================= MATRÍCULA ================= -->
+  <section class="matricula" id="matricula">
+    <div class="matricula-cab">
+      <p class="rotulo"><span>07</span> Matrícula</p>
+      <h2 class="titular" data-revelar>Pásate por el aula</h2>
+      <p class="parrafo">Sin cita: en horario de oficina siempre hay alguien en el mostrador. Si prefieres
+        que te llamemos, déjanos el teléfono y te contamos el plan completo.</p>
+    </div>
+
+    <div class="matricula-rejilla">
+      <form class="formulario" id="formulario" novalidate>
+        <p class="formulario-aviso">Formulario de muestra: no envía nada a ningún servidor.</p>
+        <div class="campo-fila">
+          <div class="campo">
+            <label for="f-nombre">Nombre</label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="f-tel">Teléfono</label>
+            <input id="f-tel" name="telefono" type="tel" autocomplete="tel" required>
+          </div>
+        </div>
+        <div class="campo-fila">
+          <div class="campo">
+            <label for="f-permiso">Qué permiso</label>
+            <select id="f-permiso" name="permiso">
+              <option>B · coche</option>
+              <option>A2 · moto media</option>
+              <option>A · moto sin límite</option>
+              <option>AM · ciclomotor</option>
+              <option>B+E · remolque</option>
+              <option>Recuperación de puntos</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="f-turno">Turno que te encaja</label>
+            <select id="f-turno" name="turno">
+              <option>Mañana (10:00)</option>
+              <option>Tarde (17:00)</option>
+              <option>Noche (20:00)</option>
+              <option>Me da igual</option>
+            </select>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="f-mensaje">Algo que debamos saber</label>
+          <textarea id="f-mensaje" name="mensaje" rows="4"></textarea>
+        </div>
+        <label class="campo-check"><input type="checkbox" id="f-ok" name="ok" required> He leído el <a href="aviso-legal.html">aviso legal</a>.</label>
+        <button class="boton boton--cian" type="submit" data-iman>Que me llamen</button>
+        <p class="formulario-respuesta" id="formulario-respuesta" role="status"></p>
+      </form>
+
+      <div class="matricula-datos">
+        <dl>
+          <div><dt>Dirección</dt><dd>Rúa da Pista 22, baixo<br>15142 Arteixo · A Coruña</dd></div>
+          <div><dt>Teléfono</dt><dd><a href="tel:+34981000000">981 00 00 00</a><br><span class="muestra">Número de muestra: no funciona.</span></dd></div>
+          <div><dt>Correo</dt><dd><a href="mailto:info@carrildez.example">info@carrildez.example</a></dd></div>
+          <div><dt>Oficina</dt><dd>Lunes a viernes 09:00 – 21:00<br>Sábado 10:00 – 13:00</dd></div>
+          <div><dt>Turnos de teórica</dt><dd>10:00 · 17:00 · 20:00<br>Repaso de test: miércoles 19:00</dd></div>
+        </dl>
+
+        <div class="mapa" id="mapa">
+          <button class="boton boton--linea" type="button" id="mapa-boton" data-iman>Cargar el mapa de Google</button>
+          <p class="mapa-nota">El mapa no se carga hasta que lo pides: así esta página no pone cookies de
+            terceros por su cuenta. La dirección es inventada; el mapa mostrará la zona aproximada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="pie-rejilla">
+    <div class="pie-marca">
+      <img src="assets/logo.svg" width="56" height="56" alt="">
+      <p>CARRIL DEZ<br><span>Autoescuela · Arteixo</span></p>
+    </div>
+    <div>
+      <h2>Aula</h2>
+      <p>Rúa da Pista 22, baixo<br>15142 Arteixo · A Coruña</p>
+    </div>
+    <div>
+      <h2>Contacto</h2>
+      <p><a href="tel:+34981000000">981 00 00 00</a><br><a href="mailto:info@carrildez.example">info@carrildez.example</a></p>
+    </div>
+    <div>
+      <h2>Horario</h2>
+      <p>L–V 09:00 – 21:00<br>S 10:00 – 13:00</p>
+    </div>
+    <div>
+      <h2>Legal</h2>
+      <p><a href="aviso-legal.html">Aviso legal y privacidad</a><br><a href="#inicio">Volver arriba</a></p>
+    </div>
+  </div>
+  <p class="sello">Sitio de demostración. CARRIL DEZ es un negocio ficticio; los datos, ilustraciones,
+    preguntas del test y todos los importes —incluidas las tasas— son de muestra, están inventados y no
+    corresponden a ninguna autoescuela real ni a ninguna tarifa oficial.</p>
+</footer>
+
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies" hidden>
+  <p>Esta web solo guarda en tu navegador que ya has visto este aviso. No hay cookies de terceros ni
+    analítica, y el mapa de Google se carga únicamente si pulsas su botón.</p>
+  <div class="cookie-acciones">
+    <button class="boton boton--cian" type="button" id="cookie-ok">De acuerdo</button>
+    <a class="cookie-mas" href="aviso-legal.html">Más información</a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260" role="img" aria-label="Ilustración del aula: pizarra, proyector y filas de pupitres">
+  <rect width="400" height="260" fill="#12151A"/>
+  <g stroke="#1A1E25" stroke-width="1">
+    <path d="M0 40h400M0 80h400M0 120h400M0 160h400M0 200h400M40 0v260M80 0v260M120 0v260M160 0v260M200 0v260M240 0v260M280 0v260M320 0v260M360 0v260"/>
+  </g>
+  <rect x="96" y="30" width="208" height="76" rx="4" fill="#0E1116" stroke="#4A5563" stroke-width="3"/>
+  <path d="M116 52h84M116 68h140M116 84h64" stroke="#39414D" stroke-width="4" stroke-linecap="round"/>
+  <path d="M232 84h52" stroke="#23E5FF" stroke-width="4" stroke-linecap="round"/>
+  <rect x="186" y="112" width="28" height="12" rx="3" fill="#23E5FF"/>
+  <path d="M200 124 L200 134" stroke="#39414D" stroke-width="3"/>
+  <g fill="#1F2630" stroke="#4A5563" stroke-width="2.5">
+    <rect x="74" y="146" width="72" height="16" rx="3"/><rect x="164" y="146" width="72" height="16" rx="3"/><rect x="254" y="146" width="72" height="16" rx="3"/>
+    <rect x="56" y="180" width="86" height="18" rx="3"/><rect x="158" y="180" width="86" height="18" rx="3"/><rect x="260" y="180" width="86" height="18" rx="3"/>
+  </g>
+  <g fill="#0B0D10" stroke="#39414D" stroke-width="2">
+    <rect x="94" y="164" width="32" height="10" rx="2"/><rect x="184" y="164" width="32" height="10" rx="2"/><rect x="274" y="164" width="32" height="10" rx="2"/>
+    <rect x="80" y="200" width="38" height="12" rx="2"/><rect x="182" y="200" width="38" height="12" rx="2"/><rect x="284" y="200" width="38" height="12" rx="2"/>
+  </g>
+  <text x="24" y="238" fill="#7C8593" font-family="Space Grotesk, sans-serif" font-size="14" letter-spacing="1">AULA · 24 PLAZAS · TRES TURNOS</text>
+</svg>

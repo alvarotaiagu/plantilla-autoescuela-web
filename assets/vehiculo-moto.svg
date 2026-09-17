@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260" role="img" aria-label="Ilustración de frente de la moto de prácticas de 35 kilovatios">
+  <rect width="400" height="260" fill="#12151A"/>
+  <g stroke="#1A1E25" stroke-width="1">
+    <path d="M0 40h400M0 80h400M0 120h400M0 160h400M0 200h400M40 0v260M80 0v260M120 0v260M160 0v260M200 0v260M240 0v260M280 0v260M320 0v260M360 0v260"/>
+  </g>
+  <path d="M60 216h280" stroke="#2C323C" stroke-width="3"/>
+  <path d="M132 86 L152 74 M268 86 L248 74" stroke="#4A5563" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="126" cy="84" r="7" fill="#23E5FF"/>
+  <circle cx="274" cy="84" r="7" fill="#23E5FF"/>
+  <path d="M152 74h96" stroke="#39414D" stroke-width="10" stroke-linecap="round"/>
+  <path d="M176 96 L200 62 L224 96 L214 150 L186 150 Z" fill="#1F2630" stroke="#4A5563" stroke-width="3"/>
+  <ellipse cx="200" cy="112" rx="20" ry="14" fill="#E7ECF2" opacity=".85"/>
+  <path d="M188 150 L188 196 M212 150 L212 196" stroke="#4A5563" stroke-width="9" stroke-linecap="round"/>
+  <rect x="180" y="150" width="40" height="18" rx="5" fill="#0E1116" stroke="#4A5563" stroke-width="2"/>
+  <rect x="186" y="192" width="28" height="24" rx="6" fill="#0B0D10" stroke="#39414D" stroke-width="3"/>
+  <path d="M200 44v18" stroke="#39414D" stroke-width="4"/>
+  <rect x="176" y="30" width="48" height="14" rx="4" fill="#23E5FF"/>
+  <text x="200" y="41" text-anchor="middle" fill="#0B0D10" font-family="Saira Condensed, Arial Narrow, sans-serif" font-size="11" font-weight="700" letter-spacing="1">A2 · 35 kW</text>
+  <text x="24" y="238" fill="#7C8593" font-family="Space Grotesk, sans-serif" font-size="14" letter-spacing="1">MOTO DE PRÁCTICAS · CON EMISORA</text>
+</svg>
