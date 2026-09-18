@@ -56,6 +56,19 @@
 </head>
 <body>
 
+<!-- Cortina de entrada: la línea discontinua se pinta y el carril se abre. -->
+<div class="cortina" id="cortina" aria-hidden="true">
+  <span class="cortina-hoja cortina-hoja--izq"></span>
+  <span class="cortina-hoja cortina-hoja--der"></span>
+  <div class="cortina-centro">
+    <svg class="cortina-carril" viewBox="0 0 24 220" focusable="false">
+      <path class="cortina-linea" d="M12 6V214" fill="none" stroke="currentColor" stroke-width="7"
+            stroke-linecap="round" stroke-dasharray="22 20"/>
+    </svg>
+    <p class="cortina-marca">CARRIL DEZ</p>
+  </div>
+</div>
+
 <a class="salto" href="#contenido">Saltar al contenido</a>
 
 <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-marca"></span><span class="cursor-texto" id="cursor-texto"></span></div>

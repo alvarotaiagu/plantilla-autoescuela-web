@@ -470,3 +470,26 @@ html.has-motion #recorrido{stroke-dasharray:var(--largo);stroke-dashoffset:var(-
   html.has-motion #recorrido{stroke-dasharray:none;stroke-dashoffset:0;}
   .cursor{display:none !important;}
 }
+
+
+/* ====================== cortina de entrada ================================
+   Obligatoria en todas las plantillas de la biblioteca. Se pinta SOLO cuando
+   hay movimiento: sin GSAP o con `prefers-reduced-motion` la regla de abajo la
+   borra del documento, así que la página no puede quedarse tapada. Además,
+   main.js tiene una red de seguridad por tiempo que la retira pase lo que pase.
+   ========================================================================== */
+.cortina{position:fixed;inset:0;z-index:400;overflow:hidden;}
+.cortina-centro{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:14px;text-align:center;padding:24px;}
+.cortina.esta-fuera{display:none;}
+html:not(.has-motion) .cortina{display:none;}
+@media (prefers-reduced-motion:reduce){.cortina{display:none;}}
+
+/* El gesto de la autoescuela: se pinta la discontinua de arriba abajo y
+   después el carril se abre en dos, con el filo interior curvado. */
+.cortina-hoja{position:absolute;top:0;bottom:0;width:50.5%;background:var(--panel);will-change:transform;}
+.cortina-hoja--izq{left:0;border-right:1px solid var(--linea);border-radius:0 46px 46px 0;}
+.cortina-hoja--der{right:0;border-left:1px solid var(--linea);border-radius:46px 0 0 46px;}
+.cortina-carril{width:24px;height:clamp(140px,30vh,210px);color:var(--cian);}
+.cortina-marca{font-family:var(--display);font-size:clamp(1.1rem,3.4vw,1.6rem);
+  letter-spacing:.3em;text-transform:uppercase;color:var(--hueso);margin:0;opacity:0;}
